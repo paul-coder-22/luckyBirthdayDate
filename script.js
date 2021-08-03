@@ -1,8 +1,8 @@
 function getResult() {
     if (getValue()) {
-        document.getElementById('getDiv').innerHTML = "Lucky"
+        document.getElementById('getDiv').innerHTML = "💥Lucky"
     } else {
-        document.getElementById('getDiv').innerHTML = "UnLucky"
+        document.getElementById('getDiv').innerHTML = "💀UnLucky"
     }
 }
 
@@ -12,9 +12,10 @@ function getValue() {
     let sum = 0
     date.map(ele => {
         for (let i = 0; i < ele.length; i++) {
-            sum += ele[i];
+            sum += Number(ele[i]);
 
         }
     })
+    console.log(sum)
     return (sum % value === 0 ? true : false);
 }

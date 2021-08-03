@@ -5,16 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fb676f87ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
     <title>Lucky | BirthDay</title>
 </head>
 
-<body>
-    <input type="date" id="dateArr">
+<body style="background-color:#1d1d26">
+
+    <div id="main-container">
+        <div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content-container">
+            <section class="info-head">
+                <div class="text-area">
+
+                    <h1>
+                        <a>Try Your Luck</a>
+                        <a>Check Out</a>
+                        <a>Your Birthday</a>
+                        <a> Lucky Or Not.</a>
+                    </h1>
+                </div>
+                <div class="image-area">
+                    <h1>Choose Date.</h1>
+                    <div class="date-tag">
+                        <input type="date" id="dateArr">
+                    </div>
+                    <h1>Put Your Lucky No.</h1>
+                    <div class="input-tag">
+                        <input type="number" id="luckyNum">
+                    </div>
+                    <button onclick="getResult()">Click</button>
+                    <h2>👇</h2>
+                    <div id="getDiv">
+                    </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- <input type="date" id="dateArr">   
     <input type="number" id="luckyNum">
     <button onclick="getResult()">Click</button>
 
     <div id="getDiv" style="border: 1px solid red; width: 100px; width: 100px;">
-
+ -->
     </div>
     <script src="./script.js"></script>
 </body>
