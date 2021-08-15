@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/fb676f87ae.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <title>Lucky | BirthDay</title>
 </head>
@@ -16,41 +16,59 @@
 <body style="background-color:#1d1d26">
 
     <div id="main-container">
-        <div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">Linkedin</a></li>
-                </ul>
-            </nav>
-        </div>
+
 
         <div class="content-container">
             <section class="info-head">
+
                 <div class="text-area">
 
                     <h1>
-                        <a>Try Your Luck</a>
-                        <a>Check Out</a>
-                        <a>Your Birthday</a>
-                        <a> Lucky Or Not.</a>
+                        <a>Is Your Birthday Lucky?</a>
+                        <a>Enter your Birthday and Lucky Number to</a>
+                        <a>continue ...</a>
                     </h1>
                 </div>
+
                 <div class="image-area">
                     <h1>Choose Date.</h1>
                     <div class="date-tag">
                         <input type="date" id="dateArr">
                     </div>
+
+                    <small class="date-error">Put a valid input</small>
                     <h1>Put Your Lucky No.</h1>
+
                     <div class="input-tag">
                         <input type="number" id="luckyNum">
                     </div>
+
+                    <small class="number-error">Put a valid Number</small>
                     <button onclick="getResult()">Click</button>
+
                     <h2>👇</h2>
-                    <div id="getDiv">
-                    </div>
+
+                    <div id="getDiv"></div>
+                    <img class="happyGif" style="opacity: 0.5;"
+                        src="https://media.giphy.com/media/3ohs7O2afIz1a8bWPm/giphy.gif" width="30%" alt="">
+                    <br>
+                    <img class="sadGif" style="opacity: 0.5;"
+                        src="https://media.giphy.com/media/M28rUlcjueKUE/giphy.gif" width="50%" alt="">
+                    <small style="color: red;">
+                        <p>*We are not storing your data</p>
+                    </small>
+                </div>
+
             </section>
+        </div>
+        <div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="https://dev.to/paulcoder22">Dev Community</a></li>
+                    <li><a href="https://github.com/paul-coder-22/luckyBirthdayDate.git">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/kiron-paul-1b81111b1/">Linkedin</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 

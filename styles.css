@@ -2,24 +2,70 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Fira Code', monospace;
     /* overflow-y: hidden; */
     /* transition: 0.5s; */
 }
-body{
+html,body{
     background-color: var(--secondary-color);
+    /* overflow-y: hidden; */
+    margin: 0;
+    padding: 0;
 }
 :root{
     --primary-color:#fff;
     --secondary-color:#1d1d26;
     --hover-color: #ff1493;
+    --error-text:red;
 }
+.content-container{
+    /* text-align: center; */
+    /* border: 10px solid red; */
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+
+}
+
+/* main content */
+.info-head{
+    /* display: flex; */
+    /* min-height: 60vh !important; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* border-top-right-radius: 2.5rem;
+    border-top-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem; */
+    box-decoration-break: var(--primary-color);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.text-area{
+    /* width: 100%; */
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px dashed  var(--primary-color);
+    
+}
+.text-area h1{
+    line-height: 3.2rem;
+    font-size: 0.8rem;
+}
+.text-area h1 a{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    color:  var(--primary-color);
+}
+
 .navigation{
-    width: 100vw;
+    /* width: 100vw; */
 }
 .navigation ul{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    margin: 0.7rem;
     list-style-type: none;
     justify-content: center;
     
@@ -32,50 +78,12 @@ body{
 .navigation ul li a{
     text-decoration: none;
     color: var(--primary-color);
+    text-shadow: 1px 5px 3px var(--hover-color);
+    font-weight: bold;
 }
 
-
-/* main content */
-.info-head{
-    display: flex;
-    min-height: 80vh;
-    flex-wrap: wrap;
-    /* border-top-right-radius: 2.5rem;
-    border-top-left-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
-    border-bottom-left-radius: 2.5rem; */
-    
-    margin: 0% 2%;
-}
-
-
-.text-area{
-    width: 50%;
-    padding: 4rem 6rem 0;
-    border: 1px dashed  var(--primary-color);
-    
-}
-.image-area{
-    width: 50%;
-    /* position: relative; */
-    text-align: center;
-    border: 1px dashed  var(--primary-color);
-
-
-
-}
-.text-area h1{
-    line-height: 3.2rem;
-    font-size: 2.3rem;
-}
-.text-area h1 a{
-    display: flex;
-    flex-direction: column;
-    font-size: 3.5rem;
-    color:  var(--primary-color);
-}
 h1 a{
-    margin: 10%;
+    margin: 5%;
     /* color: inherit; */
     text-decoration: underline 0.15em rgba(255, 255, 255, 0);
     transition: text-decoration-color 300ms;
@@ -84,26 +92,36 @@ h1 a{
 h1 a:hover{
     text-decoration-color: var(--hover-color);
 }
+
+.image-area{
+    /* width: 50%; */
+    /* position: relative; */
+    text-align: center;
+    border: 1px dashed  var(--primary-color);
+}
+
 .image-area h1{
     padding: 1rem;
-    font-size: 2.8rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
     text-decoration: underline 0.35rem var(--secondary-color);
     transition: text-decoration-color 300ms;
     font-family: monospace !important;
 }
+
 .image-area h1:hover{
     text-decoration-color: var(--hover-color);
 }
 
 .image-area .date-tag{
-    display: inline-block;
+    display: block;
     padding: 1rem;
     text-align: center;
 }
 .image-area .date-tag #dateArr{
     font-size: 1.2rem;
-  }
+}
+
 .image-area .input-tag #luckyNum{
     display: inline-block;
     width: 50%;
@@ -111,6 +129,10 @@ h1 a:hover{
     outline: none;
     border-color: var(--hover-color);
     margin: 1rem;
+}
+
+.date-error,.number-error{
+    color: var(--error-text);
 }
 .image-area button{
     display: block;
@@ -123,8 +145,6 @@ h1 a:hover{
     border-width: medium;
     border-radius: 0.4rem;
     padding: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 h2{
     font-size: 3.5rem;
@@ -134,7 +154,7 @@ h2{
     width: 70%;
     margin: auto;
     margin-top: 1rem;
-    height: 100px;
+    height: auto;
     border: 1px solid var(--primary-color);
     color:var(--primary-color);
     font-size: 2.5rem;
@@ -147,17 +167,22 @@ h2{
         padding: 1.2rem 1.2rem;
         font-size: 1rem;
     }
+    .info-head{
+        box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    }
+
     .text-area {
         text-align: center;
         width: 100%;
         padding: 0rem 1rem;
     }
+
     .text-area h1 a {
         color: var(--primary-color);
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
     h1 a {
-        margin: 10% 0;
+        margin: 6% 0;
     }
 
     /* image area */
@@ -165,7 +190,7 @@ h2{
         width: 100%;
     }
     .image-area h1 {
-        font-size: 3rem;
+        font-size: 1.9rem;
     }
     .image-area .date-tag #dateArr{
       font-size: 1.2rem;
