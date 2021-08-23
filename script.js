@@ -15,12 +15,12 @@ function getResult() {
         happyGif.style.display = "inline"
         sadGif.style.display = "none"
 
-        document.getElementById('getDiv').innerHTML = "💥Lucky"
+        document.getElementById('getDiv').innerHTML = "Hurray!!You are a lucky person!"
     } else if (getValue() === 0) {
 
         happyGif.style.display = "none"
         sadGif.style.display = "inline"
-        document.getElementById('getDiv').innerHTML = "💀UnLucky"
+        document.getElementById('getDiv').innerHTML = "Oops!!Your birthday is not a lucky number!"
 
     }
 }
