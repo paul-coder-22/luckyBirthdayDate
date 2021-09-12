@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Fira Code', monospace;
-    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
     /* transition: 0.5s; */
 }
 html,body{
@@ -17,6 +17,7 @@ html,body{
     --secondary-color:#1d1d26;
     --hover-color: #ff1493;
     --error-text:red;
+    --privacy-text : #0e0f0f;
 }
 .content-container{
     /* text-align: center; */
@@ -29,11 +30,11 @@ html,body{
 
 /* main content */
 .info-head{
-    /* display: flex; */
-    /* min-height: 60vh !important; */
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
-    /* border-top-right-radius: 2.5rem;
+    /* display: flex; 
+    min-height: 60vh !important; 
+    flex-wrap: wrap; 
+    flex-direction: column; 
+    border-top-right-radius: 2.5rem;
     border-top-left-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
     border-bottom-left-radius: 2.5rem; */
@@ -161,7 +162,21 @@ h2{
     font-size: 1.5rem;
 }
 
+.privacy-text{
+    color: var(--error-text);
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--privacy-text);
+    position: relative;
+}
 
+.privacy-text .fas{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    margin: 0.4rem;
+    cursor: pointer;
+}
 @media only screen and (max-width: 500px) {
     .navigation ul li {
         margin: 0 1rem;

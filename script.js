@@ -2,6 +2,8 @@ const dateError = document.querySelector('.date-error');
 const numberError = document.querySelector('.number-error');
 const happyGif = document.querySelector(".happyGif");
 const sadGif = document.querySelector(".sadGif");
+const privacyText = document.querySelector('.privacy-text');
+const crossMark = document.querySelector('.crossMark');
 
 // console.log(dateError.textContent)
 // console.log(numberError.textContent)
@@ -80,3 +82,7 @@ function getSumOfvalues(arr, num) {
 
     return (sum % num === 0 ? 1 : 0)
 }
+
+crossMark.addEventListener('click', () => {
+    privacyText.style.display = "none"
+})
