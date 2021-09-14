@@ -17,12 +17,11 @@ function getResult() {
         happyGif.style.display = "inline"
         sadGif.style.display = "none"
 
-        document.getElementById('getDiv').innerHTML = "Hurray!!You are a lucky person!"
+        outputText("Hurray!!You are a lucky person!")
     } else if (getValue() === 0) {
-
         happyGif.style.display = "none"
         sadGif.style.display = "inline"
-        document.getElementById('getDiv').innerHTML = "Oops!!Your birthday is not a lucky number!"
+        outputText("Oops!!Your birthday is not a lucky number!")
 
     }
 }
@@ -42,7 +41,10 @@ function getValue() {
             dateError.style.visibility = "hidden"
         }
         if (value < 1) {
+            hiddenGif();
+            document.getElementById('getDiv').innerHTML = ""
             numberError.style.visibility = "visible";
+
         } else {
             numberError.style.visibility = "hidden"
         }
@@ -66,6 +68,7 @@ function visibleText() {
     dateError.style.visibility = "visible";
     numberError.style.visibility = "visible";
 }
+
 function hiddenGif() {
     happyGif.style.display = "none";
     sadGif.style.display = "none";
@@ -81,6 +84,10 @@ function getSumOfvalues(arr, num) {
     })
 
     return (sum % num === 0 ? 1 : 0)
+}
+
+function outputText(textmsg) {
+    document.getElementById('getDiv').innerHTML = textmsg;
 }
 
 crossMark.addEventListener('click', () => {
